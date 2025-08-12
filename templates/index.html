@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blood Donation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("{{ url_for('static', filename='bg.png') }}");
+            /* Change 'background.jpg' to your image filename */
+            background-size: cover;
+            /* Adjust the background size as needed */
+            background-repeat: no-repeat;
+            background-color: #f0f0f0;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #ff1900;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #c0392b;
+        }
+
+        .scrolling-message-container {
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .scrolling-message {
+            white-space: nowrap;
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .navigation a {
+            font-size: 24px;
+            padding: 10px 20px;
+            color: #e74c3c;
+            text-decoration: none;
+            transition: color 0.3s;
+            margin: 10px;
+            border: 2px solid #e74c3c;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        .navigation a:hover {
+            background-color: #e74c3c;
+            color: #fff;
+        }
+
+        .contact-box {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .contact-heading {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+        }
+
+        .contact-details {
+            font-size: 20px;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Blood Donation Center</h1>
+    </header>
+    <div class="container">
+        <p>We are here to connect blood donors and those in need of blood. Your donation can save lives.</p>
+        <p>Click on the links below to get started:</p>
+        <div class="navigation">
+            <a href="/donate">Donate Blood</a>
+            <a href="/request_blood">Request Blood</a>
+            <a href="/donors_list">Available Donors</a>
+        </div>
+
+        
+        <div class="scrolling-message-container">
+            <div class="scrolling-message">
+                <p>Thank you for visiting our website. Your support can save lives. Donate today!</p>
+            </div>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='images.jfif') }}" alt="Left Image" style="position: absolute; right: 10px; top: 250px;">
+    <img src="{{ url_for('static', filename='download.jfif') }}" alt="Left Image" style="position: absolute; left: 10px; top: 250px;">
+    <div class="contact-box">
+        <p class="contact-heading">Contact Us</p>
+        <p class="contact-details" style ="color: #000000;" >Phone: +91 7013 847 801</p>
+        <p class="contact-details" style ="color: #000000;" >Email: tejaswivivek@gmail.com</p>
+    </div>
+</body>
+
+</html>
